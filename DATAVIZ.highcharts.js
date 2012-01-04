@@ -165,7 +165,9 @@
 			      };
 			
 			    if(data_object.options.axes){
-					chart_object.yAxis = { min: 0, title: { text : data_object.options.axes.yaxis.title, align: 'high' } };
+					  if (data_object.options.axes.yaxis){
+					    chart_object.yAxis = { min: 0, title: { text : data_object.options.axes.yaxis.title, align: 'high' } };
+				    }
 			    } else{
 					chart_object.yAxis = { min: 0, title: { text : '', align: 'high' } };
 			    }
